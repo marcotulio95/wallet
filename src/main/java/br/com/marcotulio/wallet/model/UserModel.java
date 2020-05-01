@@ -1,4 +1,4 @@
-package br.com.marcotulio.wallet.models;
+package br.com.marcotulio.wallet.model;
 
 import lombok.Data;
 

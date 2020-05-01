@@ -1,7 +1,7 @@
 package br.com.marcotulio.wallet.repository;
 
 
-import br.com.marcotulio.wallet.models.UserModel;
+import br.com.marcotulio.wallet.model.UserModel;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

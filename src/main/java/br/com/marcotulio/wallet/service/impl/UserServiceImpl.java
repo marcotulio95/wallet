@@ -1,6 +1,6 @@
 package br.com.marcotulio.wallet.service.impl;
 
-import br.com.marcotulio.wallet.models.UserModel;
+import br.com.marcotulio.wallet.model.UserModel;
 import br.com.marcotulio.wallet.repository.UserRepository;
 import br.com.marcotulio.wallet.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

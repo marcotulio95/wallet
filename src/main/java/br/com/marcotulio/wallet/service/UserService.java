@@ -1,6 +1,6 @@
 package br.com.marcotulio.wallet.service;
 
-import br.com.marcotulio.wallet.models.UserModel;
+import br.com.marcotulio.wallet.model.UserModel;
 
 import java.util.Optional;
 

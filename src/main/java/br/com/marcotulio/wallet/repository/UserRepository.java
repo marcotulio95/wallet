@@ -1,6 +1,6 @@
 package br.com.marcotulio.wallet.repository;
 
-import br.com.marcotulio.wallet.models.UserModel;
+import br.com.marcotulio.wallet.model.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
