@@ -3,6 +3,7 @@ package br.com.marcotulio.wallet.controller;
 import br.com.marcotulio.wallet.dto.UserDto;
 import br.com.marcotulio.wallet.model.UserModel;
 import br.com.marcotulio.wallet.service.UserService;
+import br.com.marcotulio.wallet.util.Bcrypt;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -28,8 +29,12 @@ public class UserController {
 
         UserModel userModel = new UserModel();
         modelMapper.map(userDto,userModel);
-        UserModel userModelResponse = userService.save(userModel);
-        return modelMapper.map(userModelResponse, UserDto.class);
+        userModel.setPassword(Bcrypt.getHash(userDto.getPassword()));
+
+        UserDto userDtoResponse = modelMapper.map(userService.save(userModel), UserDto.class);
+        userDtoResponse.setPassword(null);// TODO Check this one later
+
+        return userDtoResponse;
     }
 
 }

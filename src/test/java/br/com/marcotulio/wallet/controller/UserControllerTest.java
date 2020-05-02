@@ -57,7 +57,7 @@ public class UserControllerTest {
             .andExpect(jsonPath("$.id").value(ID))
             .andExpect(jsonPath("$.email").value(EMAIL))
             .andExpect(jsonPath("$.name").value(NAME))
-            .andExpect(jsonPath("$.password").value(PASSWORD));
+            .andExpect(jsonPath("$.password").doesNotExist());
     }
 
     public void testSaveInvalidUser() throws Exception {

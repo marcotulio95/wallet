@@ -5,8 +5,10 @@ import lombok.Data;
 import javax.persistence.*;
 import java.io.Serializable;
 
+
 @Entity
 @Data
+@Table(name = "users")
 public class UserModel implements Serializable {
 
     @Id

@@ -1,0 +1,21 @@
+  # Use postgres/example user/password credentials
+version: '3.1'
+services:
+  postgres:
+    container_name: postgres
+    network_mode: host 
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: nimda
+      POSTGRES_DB: wallet_db
+      #POSTGRES_PASSWORD: example
+      #POSTGRES_INITDB_ARGS: "localedef pt_BR -c -f UTF-8 -A /usr/share/locale/locale.alias pt_BR.utf-8"
+      #LANG: pt_BR.utf-8
+      TZ: GMT
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8000:8080
