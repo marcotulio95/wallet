@@ -24,11 +24,11 @@ public class UserController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @ResponseBody
-    public UserDto create(@Valid @RequestBody UserDto userDto, BindingResult bindingResult){
+    public UserDto create(@Valid @RequestBody UserDto userDto) {
+
         UserModel userModel = new UserModel();
         modelMapper.map(userDto,userModel);
         UserModel userModelResponse = userService.save(userModel);
-
         return modelMapper.map(userModelResponse, UserDto.class);
     }
 
